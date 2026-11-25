@@ -1,5 +1,5 @@
 # PathShala — पथशाला
-> **Demo video (2 min):** _add public YouTube link_ · **Technical report:** [docs/PathShala_Technical_Report.pdf](docs/PathShala_Technical_Report.pdf)
+> **Demo video (2 min):** https://youtu.be/uMShBU5a4UA · **Technical report:** [docs/PathShala_Technical_Report.pdf](docs/PathShala_Technical_Report.pdf)
 
 ### An on-device, neuro-symbolic personalised learning companion for Arm Android phones
 **Arm Bharat AI-SoC Challenge 2026-27 · Problem Statement 4: On-device personalised learning assistant**
