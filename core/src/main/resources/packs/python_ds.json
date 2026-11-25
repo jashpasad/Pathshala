@@ -1,0 +1,619 @@
+{
+ "id": "python_ds",
+ "title": "Python for Data Science",
+ "titleHi": "डेटा साइंस के लिए पायथन",
+ "domain": "career",
+ "description": "Career roadmap from Python basics to pandas, statistics, SQL and machine learning for data analyst / data scientist roles.",
+ "keywords": [
+  "python",
+  "data science",
+  "data scientist",
+  "data analyst",
+  "machine learning",
+  "ml",
+  "ai",
+  "pandas",
+  "numpy",
+  "coding",
+  "programming",
+  "sql",
+  "analytics",
+  "placement",
+  "internship",
+  "career"
+ ],
+ "skills": [
+  {
+   "id": "py_basics",
+   "name": "Python basics: syntax and types",
+   "nameHi": "पायथन बेसिक्स",
+   "summary": "Variables, types, operators",
+   "hours": 4,
+   "weight": 0.8,
+   "prereqs": [],
+   "keyPoints": [
+    "Python is dynamically typed; common types: int, float, str, bool.",
+    "In Python 3, / always gives a float; // is floor division; % is remainder.",
+    "Strings are immutable; f-strings format values: f\"{x:.2f}\"."
+   ],
+   "resources": [
+    "Official Python Tutorial, sections 3-4",
+    "NPTEL: The Joy of Computing using Python"
+   ],
+   "items": [
+    {
+     "id": "py_basics_1",
+     "skillId": "py_basics",
+     "stem": "What is printed by print(type(3/2)) in Python 3?",
+     "options": [
+      "<class 'int'>",
+      "<class 'float'>",
+      "<class 'decimal'>",
+      "An error"
+     ],
+     "answer": 1,
+     "difficulty": -0.8,
+     "explanation": "True division always returns a float."
+    },
+    {
+     "id": "py_basics_2",
+     "skillId": "py_basics",
+     "stem": "What does 7 // 2 evaluate to in Python 3?",
+     "options": [
+      "3.5",
+      "3",
+      "4",
+      "1"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "// is floor division."
+    }
+   ]
+  },
+  {
+   "id": "control_flow",
+   "name": "Conditionals and loops",
+   "nameHi": "कंडीशन और लूप",
+   "summary": "if/elif, for, while, range",
+   "hours": 3,
+   "weight": 0.8,
+   "prereqs": [
+    "py_basics"
+   ],
+   "keyPoints": [
+    "range(start, stop, step) stops before 'stop'.",
+    "break exits the loop; continue skips to the next iteration; pass does nothing.",
+    "Prefer for-loops over sequences; use while when the number of iterations is unknown."
+   ],
+   "resources": [
+    "Official Python Tutorial, section 4"
+   ],
+   "items": [
+    {
+     "id": "control_flow_1",
+     "skillId": "control_flow",
+     "stem": "How many values does `for i in range(2, 10, 3): print(i)` print?",
+     "options": [
+      "3",
+      "4",
+      "8",
+      "2"
+     ],
+     "answer": 0,
+     "difficulty": 0.0,
+     "explanation": "It prints 2, 5, 8."
+    },
+    {
+     "id": "control_flow_2",
+     "skillId": "control_flow",
+     "stem": "Which keyword skips to the next iteration of a loop?",
+     "options": [
+      "break",
+      "pass",
+      "continue",
+      "next"
+     ],
+     "answer": 2,
+     "difficulty": -1.0,
+     "explanation": "continue jumps to the next iteration."
+    }
+   ]
+  },
+  {
+   "id": "functions",
+   "name": "Functions and scope",
+   "nameHi": "फ़ंक्शन",
+   "summary": "def, arguments, return, scope",
+   "hours": 3,
+   "weight": 0.9,
+   "prereqs": [
+    "control_flow"
+   ],
+   "keyPoints": [
+    "A function without a return statement returns None.",
+    "Default argument values are evaluated once at definition time - avoid mutable defaults like [].",
+    "Variables assigned inside a function are local unless declared global/nonlocal."
+   ],
+   "resources": [
+    "Official Python Tutorial, section 4.8"
+   ],
+   "items": [
+    {
+     "id": "functions_1",
+     "skillId": "functions",
+     "stem": "def f(x, l=[]):\n    l.append(x)\n    return l\nf(1)\nprint(f(2))  # prints?",
+     "options": [
+      "[2]",
+      "[1, 2]",
+      "[1]",
+      "An error"
+     ],
+     "answer": 1,
+     "difficulty": 1.2,
+     "explanation": "The default list is created once and shared between calls."
+    },
+    {
+     "id": "functions_2",
+     "skillId": "functions",
+     "stem": "What does a Python function return if it has no return statement?",
+     "options": [
+      "0",
+      "None",
+      "An empty string",
+      "It raises an error"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "It implicitly returns None."
+    }
+   ]
+  },
+  {
+   "id": "data_structures",
+   "name": "Lists, dicts, sets and comprehensions",
+   "nameHi": "डेटा स्ट्रक्चर",
+   "summary": "Core containers",
+   "hours": 4,
+   "weight": 1.0,
+   "prereqs": [
+    "control_flow"
+   ],
+   "keyPoints": [
+    "Lists are ordered and mutable; tuples are immutable.",
+    "Dictionary keys must be hashable (str, int, tuple of hashables) - lists and dicts cannot be keys.",
+    "Comprehension: [expr for x in seq if cond]."
+   ],
+   "resources": [
+    "Official Python Tutorial, section 5"
+   ],
+   "items": [
+    {
+     "id": "data_structures_1",
+     "skillId": "data_structures",
+     "stem": "What is [x*x for x in range(4) if x % 2 == 0]?",
+     "options": [
+      "[0, 4]",
+      "[0, 1, 4, 9]",
+      "[4]",
+      "[1, 9]"
+     ],
+     "answer": 0,
+     "difficulty": 0.0,
+     "explanation": "Even x in 0..3 are 0 and 2; squares 0 and 4."
+    },
+    {
+     "id": "data_structures_2",
+     "skillId": "data_structures",
+     "stem": "Which of these can be used as a dictionary key?",
+     "options": [
+      "A list",
+      "A set",
+      "A tuple of ints",
+      "A dict"
+     ],
+     "answer": 2,
+     "difficulty": 0.4,
+     "explanation": "Only hashable (immutable) objects can be keys."
+    }
+   ]
+  },
+  {
+   "id": "oop",
+   "name": "Classes and objects",
+   "nameHi": "क्लास और ऑब्जेक्ट",
+   "summary": "OOP in Python",
+   "hours": 4,
+   "weight": 0.6,
+   "prereqs": [
+    "functions",
+    "data_structures"
+   ],
+   "keyPoints": [
+    "A class bundles data (attributes) and behaviour (methods).",
+    "__init__ initialises a new object's attributes; self refers to the current instance.",
+    "Inheritance lets a subclass reuse and override parent methods."
+   ],
+   "resources": [
+    "Official Python Tutorial, section 9"
+   ],
+   "items": [
+    {
+     "id": "oop_1",
+     "skillId": "oop",
+     "stem": "In a Python method, self refers to:",
+     "options": [
+      "The class itself",
+      "The current instance",
+      "The parent class",
+      "A global object"
+     ],
+     "answer": 1,
+     "difficulty": -0.8,
+     "explanation": "self is the instance the method was called on."
+    },
+    {
+     "id": "oop_2",
+     "skillId": "oop",
+     "stem": "Which method initialises a new object's attributes?",
+     "options": [
+      "__new__",
+      "__init__",
+      "__call__",
+      "__create__"
+     ],
+     "answer": 1,
+     "difficulty": -0.3,
+     "explanation": "__init__ runs after the object is created to set its attributes."
+    }
+   ]
+  },
+  {
+   "id": "numpy",
+   "name": "NumPy arrays and vectorisation",
+   "nameHi": "नमपाई",
+   "summary": "ndarrays, broadcasting",
+   "hours": 5,
+   "weight": 1.0,
+   "prereqs": [
+    "data_structures",
+    "functions"
+   ],
+   "keyPoints": [
+    "NumPy arrays support element-wise arithmetic: np.array([1,2,3]) * 2 → [2,4,6].",
+    "Broadcasting stretches size-1 dimensions: (3,1) + (1,4) → (3,4).",
+    "Vectorised operations are much faster than Python loops."
+   ],
+   "resources": [
+    "NumPy: the absolute basics for beginners (official docs)"
+   ],
+   "items": [
+    {
+     "id": "numpy_1",
+     "skillId": "numpy",
+     "stem": "a = np.array([1, 2, 3]). What is a * 2?",
+     "options": [
+      "[1, 2, 3, 1, 2, 3]",
+      "array([2, 4, 6])",
+      "An error",
+      "array([1, 2, 3, 2])"
+     ],
+     "answer": 1,
+     "difficulty": -0.8,
+     "explanation": "Arithmetic on arrays is element-wise."
+    },
+    {
+     "id": "numpy_2",
+     "skillId": "numpy",
+     "stem": "What is the shape of np.zeros((3, 1)) + np.zeros((1, 4))?",
+     "options": [
+      "(3, 1)",
+      "(1, 4)",
+      "(3, 4)",
+      "An error"
+     ],
+     "answer": 2,
+     "difficulty": 0.6,
+     "explanation": "Broadcasting expands both to (3, 4)."
+    }
+   ]
+  },
+  {
+   "id": "pandas",
+   "name": "pandas DataFrames",
+   "nameHi": "पांडास",
+   "summary": "Loading, filtering, grouping data",
+   "hours": 6,
+   "weight": 1.2,
+   "prereqs": [
+    "numpy"
+   ],
+   "keyPoints": [
+    "A DataFrame is a table of labelled columns (Series).",
+    "Boolean filtering: df[df['age'] > 30].",
+    "groupby + aggregation: df.groupby('city')['sales'].mean() gives one value per city.",
+    ".loc selects by label, .iloc by position."
+   ],
+   "resources": [
+    "pandas: 10 minutes to pandas (official docs)"
+   ],
+   "items": [
+    {
+     "id": "pandas_1",
+     "skillId": "pandas",
+     "stem": "Which expression selects rows of df where column 'age' > 30?",
+     "options": [
+      "df[df['age'] > 30]",
+      "df.age > 30",
+      "df.select(age > 30)",
+      "df.loc['age' > 30]"
+     ],
+     "answer": 0,
+     "difficulty": -0.3,
+     "explanation": "A boolean Series inside [] filters rows; df.age > 30 alone is just the mask."
+    },
+    {
+     "id": "pandas_2",
+     "skillId": "pandas",
+     "stem": "df.groupby('city')['sales'].mean() returns:",
+     "options": [
+      "A DataFrame of all columns",
+      "Mean sales per city, as a Series",
+      "Total sales",
+      "The number of cities"
+     ],
+     "answer": 1,
+     "difficulty": 0.2,
+     "explanation": "One aggregated value per group."
+    }
+   ]
+  },
+  {
+   "id": "viz",
+   "name": "Data visualisation",
+   "nameHi": "डेटा विज़ुअलाइज़ेशन",
+   "summary": "matplotlib/seaborn chart choice",
+   "hours": 3,
+   "weight": 0.7,
+   "prereqs": [
+    "pandas"
+   ],
+   "keyPoints": [
+    "Histogram: distribution of one numeric variable.",
+    "Bar chart: compare a value across categories; line chart: trends over time; scatter: relationship of two numerics.",
+    "Label axes and units; avoid 3D and pie charts for comparisons."
+   ],
+   "resources": [
+    "matplotlib Quick start guide (official docs)"
+   ],
+   "items": [
+    {
+     "id": "viz_1",
+     "skillId": "viz",
+     "stem": "The best plot to show the distribution of a single numeric variable:",
+     "options": [
+      "Pie chart",
+      "Histogram",
+      "Line plot against row index",
+      "Scatter of x vs x"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "Histograms show distribution shape."
+    },
+    {
+     "id": "viz_2",
+     "skillId": "viz",
+     "stem": "To compare one numeric value across 5 categories, the clearest default is a:",
+     "options": [
+      "Bar chart",
+      "3D pie chart",
+      "Radar chart",
+      "Area chart"
+     ],
+     "answer": 0,
+     "difficulty": -0.3,
+     "explanation": "Bars on a common baseline are easiest to compare."
+    }
+   ]
+  },
+  {
+   "id": "stats",
+   "name": "Descriptive statistics and probability",
+   "nameHi": "सांख्यिकी और प्रायिकता",
+   "summary": "Centre, spread, probability",
+   "hours": 5,
+   "weight": 1.0,
+   "prereqs": [
+    "py_basics"
+   ],
+   "keyPoints": [
+    "The median is robust to outliers; the mean is not.",
+    "Variance/standard deviation measure spread.",
+    "P(at least one) = 1 − P(none); independent events multiply."
+   ],
+   "resources": [
+    "NCERT Class 11 Mathematics: Statistics; Probability",
+    "Khan Academy: Statistics and probability"
+   ],
+   "items": [
+    {
+     "id": "stats_1",
+     "skillId": "stats",
+     "stem": "For data 2, 3, 3, 4, 100 the best measure of central tendency is the:",
+     "options": [
+      "Mean",
+      "Median",
+      "Range",
+      "Variance"
+     ],
+     "answer": 1,
+     "difficulty": -0.3,
+     "explanation": "100 is an outlier; the median (3) is robust."
+    },
+    {
+     "id": "stats_2",
+     "skillId": "stats",
+     "stem": "A fair coin is tossed 3 times. Probability of at least one head:",
+     "options": [
+      "1/2",
+      "3/8",
+      "7/8",
+      "1/8"
+     ],
+     "answer": 2,
+     "difficulty": 0.0,
+     "explanation": "1 − (1/2)³ = 7/8."
+    }
+   ]
+  },
+  {
+   "id": "sql",
+   "name": "SQL for analysis",
+   "nameHi": "एसक्यूएल",
+   "summary": "SELECT, JOIN, GROUP BY, HAVING",
+   "hours": 4,
+   "weight": 0.9,
+   "prereqs": [],
+   "keyPoints": [
+    "SELECT ... FROM ... WHERE filters rows before grouping.",
+    "GROUP BY aggregates; HAVING filters groups after aggregation.",
+    "COUNT(*) counts rows; JOINs combine tables on keys."
+   ],
+   "resources": [
+    "SQLBolt interactive lessons",
+    "Mode SQL tutorial"
+   ],
+   "items": [
+    {
+     "id": "sql_1",
+     "skillId": "sql",
+     "stem": "Which clause filters groups after aggregation?",
+     "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "LIMIT"
+     ],
+     "answer": 1,
+     "difficulty": 0.0,
+     "explanation": "WHERE filters rows before grouping; HAVING filters groups."
+    },
+    {
+     "id": "sql_2",
+     "skillId": "sql",
+     "stem": "SELECT COUNT(*) FROM t returns:",
+     "options": [
+      "The number of columns",
+      "The number of rows",
+      "Non-null values in the first column",
+      "The sum of all rows"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "COUNT(*) counts rows."
+    }
+   ]
+  },
+  {
+   "id": "ml_basics",
+   "name": "Machine learning fundamentals",
+   "nameHi": "मशीन लर्निंग बेसिक्स",
+   "summary": "Supervised learning with scikit-learn",
+   "hours": 6,
+   "weight": 1.2,
+   "prereqs": [
+    "pandas",
+    "stats"
+   ],
+   "keyPoints": [
+    "Supervised learning: regression predicts numbers, classification predicts categories.",
+    "Split data into train and test sets; fit on train, evaluate on test.",
+    "Overfitting: low training error, high test error; fix with more data, regularisation or simpler models."
+   ],
+   "resources": [
+    "scikit-learn: Getting Started (official docs)",
+    "NPTEL: Introduction to Machine Learning"
+   ],
+   "items": [
+    {
+     "id": "ml_basics_1",
+     "skillId": "ml_basics",
+     "stem": "Predicting house price from features is an example of:",
+     "options": [
+      "Classification",
+      "Regression",
+      "Clustering",
+      "Dimensionality reduction"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "The target is a continuous number."
+    },
+    {
+     "id": "ml_basics_2",
+     "skillId": "ml_basics",
+     "stem": "A model has very low training error but high test error. This is:",
+     "options": [
+      "Underfitting",
+      "Overfitting",
+      "Good generalisation",
+      "Impossible"
+     ],
+     "answer": 1,
+     "difficulty": 0.0,
+     "explanation": "It memorised training data and fails to generalise."
+    }
+   ]
+  },
+  {
+   "id": "model_eval",
+   "name": "Model evaluation and validation",
+   "nameHi": "मॉडल मूल्यांकन",
+   "summary": "Metrics, cross-validation",
+   "hours": 4,
+   "weight": 1.0,
+   "prereqs": [
+    "ml_basics"
+   ],
+   "keyPoints": [
+    "Accuracy misleads on imbalanced data; use precision, recall, F1 or ROC-AUC.",
+    "k-fold cross-validation gives a more reliable estimate of generalisation.",
+    "Never tune hyper-parameters on the test set."
+   ],
+   "resources": [
+    "scikit-learn: Model evaluation (official docs)"
+   ],
+   "items": [
+    {
+     "id": "model_eval_1",
+     "skillId": "model_eval",
+     "stem": "For a rare-disease detector (1% positives), which metric is most misleading?",
+     "options": [
+      "Recall",
+      "Precision",
+      "Accuracy",
+      "F1-score"
+     ],
+     "answer": 2,
+     "difficulty": 0.5,
+     "explanation": "Predicting 'no disease' always gives 99% accuracy."
+    },
+    {
+     "id": "model_eval_2",
+     "skillId": "model_eval",
+     "stem": "Why use k-fold cross-validation?",
+     "options": [
+      "To train faster",
+      "To get a more reliable estimate of generalisation",
+      "To create more labels",
+      "To remove outliers"
+     ],
+     "answer": 1,
+     "difficulty": 0.0,
+     "explanation": "Averaging over folds reduces variance of the estimate."
+    }
+   ]
+  }
+ ]
+}

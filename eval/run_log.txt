@@ -1,0 +1,10 @@
+E1/E2 jee_mechanics: graph_cat acc@6=0.828 acc@10=0.864, indep_cat acc@6=0.824 acc@10=0.854, graph_random acc@6=0.810 acc@10=0.843, fixed_form acc@6=0.719 acc@10=0.765 | self-stop q=9.87 acc=0.877
+E1/E2 python_ds: graph_cat acc@6=0.863 acc@10=0.891, indep_cat acc@6=0.851 acc@10=0.865, graph_random acc@6=0.836 acc@10=0.857, fixed_form acc@6=0.660 acc@10=0.728 | self-stop q=10.81 acc=0.898
+E1/E2 gate_cheme: graph_cat acc@6=0.827 acc@10=0.869, indep_cat acc@6=0.803 acc@10=0.835, graph_random acc@6=0.795 acc@10=0.828, fixed_form acc@6=0.765 acc@10=0.794 | self-stop q=11.46 acc=0.882
+E3 jee_mechanics D=56 h/w=5.0: linear_syllabus=0.268 (waste 49%), diagnostic_linear=0.242 (waste 41%), pathshala=0.508 (waste 30%)
+E3 jee_mechanics D=56 h/w=10.0: linear_syllabus=0.506 (waste 34%), diagnostic_linear=0.381 (waste 27%), pathshala=0.608 (waste 24%)
+E3 python_ds D=56 h/w=5.0: linear_syllabus=0.321 (waste 54%), diagnostic_linear=0.270 (waste 42%), pathshala=0.497 (waste 26%)
+E3 python_ds D=56 h/w=10.0: linear_syllabus=0.459 (waste 32%), diagnostic_linear=0.360 (waste 25%), pathshala=0.629 (waste 22%)
+E3 gate_cheme D=56 h/w=5.0: linear_syllabus=0.283 (waste 64%), diagnostic_linear=0.254 (waste 57%), pathshala=0.549 (waste 36%)
+E3 gate_cheme D=56 h/w=10.0: linear_syllabus=0.602 (waste 51%), diagnostic_linear=0.444 (waste 42%), pathshala=0.639 (waste 34%)
+done in 125s -> /home/claude/pathshala/eval/results

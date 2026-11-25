@@ -1,0 +1,8 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+  <!-- path of nodes: a learning path -->
+  <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:fillColor="#00000000" android:pathData="M34,72 L50,52 L66,60 L76,38"/>
+  <path android:fillColor="#FFFFFF" android:pathData="M34,72m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+  <path android:fillColor="#FFFFFF" android:pathData="M50,52m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+  <path android:fillColor="#FFFFFF" android:pathData="M66,60m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+  <path android:fillColor="#FFC27A" android:pathData="M76,38m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+</vector>

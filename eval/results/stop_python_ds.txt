@@ -1,0 +1,1 @@
+pack=python_ds learners=500 avg_questions=10.81 accuracy_at_stop=0.8977

@@ -1,0 +1,612 @@
+{
+ "id": "gate_cheme",
+ "title": "GATE Chemical Engineering (Core)",
+ "titleHi": "गेट केमिकल इंजीनियरिंग",
+ "domain": "exam",
+ "description": "GATE CH core syllabus: engineering mathematics, process calculations, thermodynamics, fluid mechanics, heat and mass transfer, reaction engineering, process control, plant design.",
+ "keywords": [
+  "gate",
+  "gate ch",
+  "chemical engineering",
+  "chemical",
+  "cheme",
+  "psu",
+  "thermodynamics",
+  "heat transfer",
+  "mass transfer",
+  "reaction engineering",
+  "process control"
+ ],
+ "skills": [
+  {
+   "id": "eng_math",
+   "name": "Engineering mathematics",
+   "nameHi": "इंजीनियरिंग गणित",
+   "summary": "Linear algebra, ODEs, calculus",
+   "hours": 8,
+   "weight": 1.3,
+   "prereqs": [],
+   "keyPoints": [
+    "Eigenvalues of a diagonal (or triangular) matrix are its diagonal entries.",
+    "Linear first-order ODE dy/dx + P y = Q: integrating factor e^(∫P dx).",
+    "dy/dx = −ky gives exponential decay y = y₀e^(−kx)."
+   ],
+   "resources": [
+    "NPTEL: Mathematical Methods in Chemical Engineering"
+   ],
+   "items": [
+    {
+     "id": "eng_math_1",
+     "skillId": "eng_math",
+     "stem": "Eigenvalues of the matrix [[2, 0], [0, 3]] are:",
+     "options": [
+      "2 and 3",
+      "0 and 5",
+      "1 and 6",
+      "5 and 6"
+     ],
+     "answer": 0,
+     "difficulty": -1.0,
+     "explanation": "Diagonal entries of a diagonal matrix."
+    },
+    {
+     "id": "eng_math_2",
+     "skillId": "eng_math",
+     "stem": "The integrating factor for dy/dx + 2y = x is:",
+     "options": [
+      "e^(2x)",
+      "e^(−2x)",
+      "2x",
+      "x²"
+     ],
+     "answer": 0,
+     "difficulty": 0.0,
+     "explanation": "IF = e^(∫2 dx) = e^(2x)."
+    }
+   ]
+  },
+  {
+   "id": "mass_energy_balance",
+   "name": "Process calculations: material and energy balances",
+   "nameHi": "पदार्थ एवं ऊर्जा संतुलन",
+   "summary": "Balances, recycle, purge",
+   "hours": 6,
+   "weight": 1.0,
+   "prereqs": [],
+   "keyPoints": [
+    "Input − output + generation − consumption = accumulation.",
+    "Use a tie component (e.g. salt in evaporation) that passes through unchanged.",
+    "Recycle raises overall conversion of unreacted feed; purge prevents inert build-up."
+   ],
+   "resources": [
+    "Himmelblau & Riggs, Basic Principles and Calculations in Chemical Engineering",
+    "NPTEL: Process Calculations"
+   ],
+   "items": [
+    {
+     "id": "mass_energy_balance_1",
+     "skillId": "mass_energy_balance",
+     "stem": "100 kg/h of 20 wt% NaCl solution is concentrated to 50 wt% NaCl by evaporation. Water removed:",
+     "options": [
+      "40 kg/h",
+      "60 kg/h",
+      "50 kg/h",
+      "80 kg/h"
+     ],
+     "answer": 1,
+     "difficulty": -0.3,
+     "explanation": "Salt = 20 kg/h → product = 40 kg/h → water removed = 60 kg/h."
+    },
+    {
+     "id": "mass_energy_balance_2",
+     "skillId": "mass_energy_balance",
+     "stem": "A recycle stream in a reactor process is mainly used to:",
+     "options": [
+      "Reduce conversion",
+      "Increase overall conversion of unreacted feed",
+      "Remove inerts",
+      "Increase pressure"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "Unreacted feed is returned to the reactor."
+    }
+   ]
+  },
+  {
+   "id": "thermo",
+   "name": "Chemical engineering thermodynamics",
+   "nameHi": "ऊष्मागतिकी",
+   "summary": "Laws of thermodynamics, cycles, properties",
+   "hours": 8,
+   "weight": 1.1,
+   "prereqs": [
+    "mass_energy_balance"
+   ],
+   "keyPoints": [
+    "First law: ΔU = Q − W; for an ideal gas U depends only on T.",
+    "Carnot efficiency η = 1 − T_c/T_h (temperatures in kelvin).",
+    "Entropy of an isolated system never decreases."
+   ],
+   "resources": [
+    "Smith, Van Ness & Abbott, Introduction to Chemical Engineering Thermodynamics"
+   ],
+   "items": [
+    {
+     "id": "thermo_1",
+     "skillId": "thermo",
+     "stem": "For an ideal gas, internal energy depends only on:",
+     "options": [
+      "Pressure",
+      "Volume",
+      "Temperature",
+      "Pressure and volume"
+     ],
+     "answer": 2,
+     "difficulty": -1.0,
+     "explanation": "No intermolecular forces, so U = U(T)."
+    },
+    {
+     "id": "thermo_2",
+     "skillId": "thermo",
+     "stem": "The efficiency of a Carnot engine working between 600 K and 300 K is:",
+     "options": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "η = 1 − 300/600 = 0.5."
+    }
+   ]
+  },
+  {
+   "id": "vle",
+   "name": "Phase equilibria and VLE",
+   "nameHi": "प्रावस्था साम्य (VLE)",
+   "summary": "Raoult's law, azeotropes, activity",
+   "hours": 5,
+   "weight": 0.9,
+   "prereqs": [
+    "thermo"
+   ],
+   "keyPoints": [
+    "Raoult's law (ideal): pᵢ = xᵢ Pᵢˢᵃᵗ; modified Raoult: yᵢP = xᵢγᵢPᵢˢᵃᵗ.",
+    "At an azeotrope, vapour and liquid have the same composition (x = y), so simple distillation cannot pass it.",
+    "Relative volatility α = (y₁/x₁)/(y₂/x₂)."
+   ],
+   "resources": [
+    "Smith, Van Ness & Abbott, chapters on VLE"
+   ],
+   "items": [
+    {
+     "id": "vle_1",
+     "skillId": "vle",
+     "stem": "For an ideal solution (Raoult's law), the partial pressure of component i equals:",
+     "options": [
+      "xᵢ Pᵢˢᵃᵗ",
+      "yᵢ Pᵢˢᵃᵗ",
+      "xᵢ P",
+      "Pᵢˢᵃᵗ / xᵢ"
+     ],
+     "answer": 0,
+     "difficulty": -0.5,
+     "explanation": "pᵢ = xᵢ Pᵢˢᵃᵗ."
+    },
+    {
+     "id": "vle_2",
+     "skillId": "vle",
+     "stem": "At its azeotropic composition, a mixture has:",
+     "options": [
+      "Equal vapour and liquid compositions (x = y)",
+      "Relative volatility of 0",
+      "Infinite relative volatility",
+      "Zero vapour pressure"
+     ],
+     "answer": 0,
+     "difficulty": 0.2,
+     "explanation": "α = 1 and x = y at the azeotrope."
+    }
+   ]
+  },
+  {
+   "id": "fluid_mech",
+   "name": "Fluid mechanics",
+   "nameHi": "द्रव यांत्रिकी",
+   "summary": "Flow regimes, pipe flow, friction factor",
+   "hours": 7,
+   "weight": 1.1,
+   "prereqs": [
+    "eng_math"
+   ],
+   "keyPoints": [
+    "Reynolds number Re = ρvD/μ = inertial/viscous forces; laminar pipe flow for Re < ~2100.",
+    "Laminar pipe flow: Fanning friction factor f = 16/Re (Darcy factor = 64/Re).",
+    "Hagen–Poiseuille: pressure drop ∝ μLQ/D⁴ in laminar flow."
+   ],
+   "resources": [
+    "McCabe, Smith & Harriott, Unit Operations of Chemical Engineering",
+    "NPTEL: Fluid Mechanics (Chemical)"
+   ],
+   "items": [
+    {
+     "id": "fluid_mech_1",
+     "skillId": "fluid_mech",
+     "stem": "For laminar flow in a circular pipe, the Fanning friction factor is:",
+     "options": [
+      "64/Re",
+      "16/Re",
+      "0.079 Re^−0.25",
+      "24/Re"
+     ],
+     "answer": 1,
+     "difficulty": 0.4,
+     "explanation": "Fanning f = 16/Re; the Darcy factor is 4× larger (64/Re)."
+    },
+    {
+     "id": "fluid_mech_2",
+     "skillId": "fluid_mech",
+     "stem": "Reynolds number represents the ratio of:",
+     "options": [
+      "Inertial to viscous forces",
+      "Viscous to gravity forces",
+      "Pressure to inertial forces",
+      "Surface tension to viscous forces"
+     ],
+     "answer": 0,
+     "difficulty": -1.0,
+     "explanation": "Re = ρvD/μ."
+    }
+   ]
+  },
+  {
+   "id": "mech_ops",
+   "name": "Mechanical operations",
+   "nameHi": "यांत्रिक संक्रियाएँ",
+   "summary": "Size reduction, settling, filtration",
+   "hours": 4,
+   "weight": 0.6,
+   "prereqs": [
+    "fluid_mech"
+   ],
+   "keyPoints": [
+    "Rittinger's law: crushing energy ∝ new surface area created; Kick's law: ∝ log of size ratio.",
+    "Stokes' law (Re < 1): terminal velocity v = d²(ρₚ − ρ)g / 18μ.",
+    "Filtration resistance grows with cake thickness."
+   ],
+   "resources": [
+    "McCabe, Smith & Harriott, Unit Operations of Chemical Engineering"
+   ],
+   "items": [
+    {
+     "id": "mech_ops_1",
+     "skillId": "mech_ops",
+     "stem": "Rittinger's law states that the energy required for crushing is proportional to:",
+     "options": [
+      "The size-reduction ratio",
+      "The new surface area created",
+      "The logarithm of the size ratio",
+      "The feed mass only"
+     ],
+     "answer": 1,
+     "difficulty": 0.2,
+     "explanation": "Rittinger: energy ∝ (1/D₂ − 1/D₁), i.e. new surface."
+    },
+    {
+     "id": "mech_ops_2",
+     "skillId": "mech_ops",
+     "stem": "In the Stokes regime, terminal settling velocity is proportional to particle diameter as:",
+     "options": [
+      "d",
+      "d²",
+      "√d",
+      "1/d"
+     ],
+     "answer": 1,
+     "difficulty": -0.3,
+     "explanation": "v ∝ d²."
+    }
+   ]
+  },
+  {
+   "id": "heat_transfer",
+   "name": "Heat transfer",
+   "nameHi": "ऊष्मा अंतरण",
+   "summary": "Conduction, convection, exchangers",
+   "hours": 7,
+   "weight": 1.1,
+   "prereqs": [
+    "fluid_mech"
+   ],
+   "keyPoints": [
+    "Steady 1-D conduction through a plane wall with constant k gives a linear temperature profile.",
+    "LMTD = (ΔT₁ − ΔT₂) / ln(ΔT₁/ΔT₂), using terminal temperature differences.",
+    "Q = U A ΔT_lm for a heat exchanger."
+   ],
+   "resources": [
+    "Holman, Heat Transfer",
+    "NPTEL: Heat Transfer (Chemical)"
+   ],
+   "items": [
+    {
+     "id": "heat_transfer_1",
+     "skillId": "heat_transfer",
+     "stem": "In steady 1-D conduction through a plane wall of constant conductivity, the temperature profile is:",
+     "options": [
+      "Linear",
+      "Parabolic",
+      "Exponential",
+      "Logarithmic"
+     ],
+     "answer": 0,
+     "difficulty": -1.0,
+     "explanation": "d²T/dx² = 0 ⇒ linear."
+    },
+    {
+     "id": "heat_transfer_2",
+     "skillId": "heat_transfer",
+     "stem": "Counter-current exchanger: hot fluid 150 → 100 °C, cold fluid 50 → 80 °C. LMTD is about:",
+     "options": [
+      "60.0 °C",
+      "59.4 °C",
+      "50.0 °C",
+      "70.0 °C"
+     ],
+     "answer": 1,
+     "difficulty": 0.6,
+     "explanation": "ΔT₁ = 70, ΔT₂ = 50; LMTD = 20/ln(1.4) ≈ 59.4 °C."
+    }
+   ]
+  },
+  {
+   "id": "mass_transfer",
+   "name": "Mass transfer and separations",
+   "nameHi": "द्रव्यमान अंतरण",
+   "summary": "Diffusion, distillation, absorption",
+   "hours": 8,
+   "weight": 1.2,
+   "prereqs": [
+    "heat_transfer",
+    "vle"
+   ],
+   "keyPoints": [
+    "Fick's first law: J = −D dC/dx (flux ∝ concentration gradient).",
+    "McCabe–Thiele: q-line slope q/(q−1); saturated liquid feed (q = 1) gives a vertical q-line.",
+    "Minimum reflux corresponds to a pinch where operating and equilibrium lines touch."
+   ],
+   "resources": [
+    "Treybal, Mass-Transfer Operations",
+    "NPTEL: Mass Transfer Operations"
+   ],
+   "items": [
+    {
+     "id": "mass_transfer_1",
+     "skillId": "mass_transfer",
+     "stem": "Fick's first law relates molar diffusion flux to the:",
+     "options": [
+      "Concentration gradient",
+      "Temperature gradient",
+      "Velocity gradient",
+      "Pressure only"
+     ],
+     "answer": 0,
+     "difficulty": -1.0,
+     "explanation": "J = −D dC/dx."
+    },
+    {
+     "id": "mass_transfer_2",
+     "skillId": "mass_transfer",
+     "stem": "In McCabe–Thiele analysis, a saturated liquid feed gives a q-line that is:",
+     "options": [
+      "Horizontal",
+      "Vertical",
+      "At 45°",
+      "Of slope −1"
+     ],
+     "answer": 1,
+     "difficulty": 0.4,
+     "explanation": "q = 1 ⇒ slope q/(q−1) → ∞."
+    }
+   ]
+  },
+  {
+   "id": "reaction_eng",
+   "name": "Chemical reaction engineering",
+   "nameHi": "रासायनिक अभिक्रिया इंजीनियरिंग",
+   "summary": "Kinetics, ideal reactors",
+   "hours": 8,
+   "weight": 1.2,
+   "prereqs": [
+    "mass_energy_balance",
+    "eng_math"
+   ],
+   "keyPoints": [
+    "First-order half-life t½ = ln2/k, independent of initial concentration.",
+    "For positive-order reactions, a PFR gives higher conversion than a CSTR of the same volume.",
+    "First-order: PFR X = 1 − e^(−kτ); CSTR X = kτ/(1 + kτ)."
+   ],
+   "resources": [
+    "Levenspiel, Chemical Reaction Engineering",
+    "Fogler, Elements of Chemical Reaction Engineering"
+   ],
+   "items": [
+    {
+     "id": "reaction_eng_1",
+     "skillId": "reaction_eng",
+     "stem": "For a first-order reaction, the half-life:",
+     "options": [
+      "Depends on initial concentration",
+      "Is independent of initial concentration",
+      "Increases with conversion",
+      "Is zero"
+     ],
+     "answer": 1,
+     "difficulty": -0.8,
+     "explanation": "t½ = ln2/k."
+    },
+    {
+     "id": "reaction_eng_2",
+     "skillId": "reaction_eng",
+     "stem": "For a first-order liquid reaction at the same kτ, conversion in a CSTR compared with a PFR is:",
+     "options": [
+      "Higher",
+      "Lower",
+      "Equal",
+      "Cannot be compared"
+     ],
+     "answer": 1,
+     "difficulty": 0.2,
+     "explanation": "kτ/(1+kτ) < 1 − e^(−kτ) for kτ > 0."
+    }
+   ]
+  },
+  {
+   "id": "process_control",
+   "name": "Instrumentation and process control",
+   "nameHi": "प्रक्रिया नियंत्रण",
+   "summary": "Transfer functions, PID, stability",
+   "hours": 6,
+   "weight": 0.9,
+   "prereqs": [
+    "eng_math"
+   ],
+   "keyPoints": [
+    "First-order system transfer function: G(s) = K/(τs + 1).",
+    "Integral action removes steady-state offset; derivative action anticipates change.",
+    "Dead time appears as e^(−θs) in a transfer function."
+   ],
+   "resources": [
+    "Seborg, Edgar & Mellichamp, Process Dynamics and Control",
+    "NPTEL: Process Control"
+   ],
+   "items": [
+    {
+     "id": "process_control_1",
+     "skillId": "process_control",
+     "stem": "The transfer function of a first-order system with gain K and time constant τ is:",
+     "options": [
+      "K/(τs + 1)",
+      "Kτs",
+      "K/(s² + τs + 1)",
+      "K e^(−τs)"
+     ],
+     "answer": 0,
+     "difficulty": -0.5,
+     "explanation": "Standard first-order lag."
+    },
+    {
+     "id": "process_control_2",
+     "skillId": "process_control",
+     "stem": "Adding integral action to a proportional controller primarily:",
+     "options": [
+      "Eliminates steady-state offset",
+      "Reduces measurement noise",
+      "Always makes the loop more stable",
+      "Removes dead time"
+     ],
+     "answer": 0,
+     "difficulty": 0.0,
+     "explanation": "Integral action keeps acting until the error is zero."
+    }
+   ]
+  },
+  {
+   "id": "plant_design",
+   "name": "Plant design and economics",
+   "nameHi": "संयंत्र डिज़ाइन और अर्थशास्त्र",
+   "summary": "Costing, payback, scaling",
+   "hours": 4,
+   "weight": 0.7,
+   "prereqs": [
+    "mass_energy_balance"
+   ],
+   "keyPoints": [
+    "Payback period = time for cumulative cash flow to recover the fixed capital investment.",
+    "Six-tenths rule: cost₂ = cost₁ × (capacity₂/capacity₁)^0.6.",
+    "Time value of money: discount future cash flows (NPV)."
+   ],
+   "resources": [
+    "Peters & Timmerhaus, Plant Design and Economics for Chemical Engineers"
+   ],
+   "items": [
+    {
+     "id": "plant_design_1",
+     "skillId": "plant_design",
+     "stem": "Payback period is the:",
+     "options": [
+      "Time for cumulative cash flow to recover the fixed capital investment",
+      "Total project life",
+      "Time to build the plant",
+      "Depreciation period"
+     ],
+     "answer": 0,
+     "difficulty": -0.5,
+     "explanation": "Standard definition."
+    },
+    {
+     "id": "plant_design_2",
+     "skillId": "plant_design",
+     "stem": "Under the six-tenths rule, doubling plant capacity multiplies cost by about:",
+     "options": [
+      "2.0",
+      "1.52",
+      "1.2",
+      "0.6"
+     ],
+     "answer": 1,
+     "difficulty": 0.2,
+     "explanation": "2^0.6 ≈ 1.52."
+    }
+   ]
+  },
+  {
+   "id": "chem_tech",
+   "name": "Chemical technology",
+   "nameHi": "रासायनिक प्रौद्योगिकी",
+   "summary": "Major industrial processes",
+   "hours": 3,
+   "weight": 0.5,
+   "prereqs": [],
+   "keyPoints": [
+    "Haber process: N₂ + 3H₂ ⇌ 2NH₃ over a promoted iron catalyst, high pressure.",
+    "Contact process: SO₂ oxidised to SO₃ over V₂O₅, then absorbed to make H₂SO₄.",
+    "Steam reforming of methane produces synthesis gas (CO + H₂)."
+   ],
+   "resources": [
+    "Dryden's Outlines of Chemical Technology"
+   ],
+   "items": [
+    {
+     "id": "chem_tech_1",
+     "skillId": "chem_tech",
+     "stem": "The Haber process for ammonia uses which catalyst?",
+     "options": [
+      "Platinum",
+      "Promoted iron",
+      "Vanadium pentoxide",
+      "Nickel"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "Iron with K₂O/Al₂O₃ promoters."
+    },
+    {
+     "id": "chem_tech_2",
+     "skillId": "chem_tech",
+     "stem": "In the contact process for sulphuric acid, SO₂ is oxidised over:",
+     "options": [
+      "V₂O₅",
+      "Iron",
+      "Copper",
+      "Al₂O₃"
+     ],
+     "answer": 0,
+     "difficulty": -0.3,
+     "explanation": "Vanadium pentoxide catalyst."
+    }
+   ]
+  }
+ ]
+}

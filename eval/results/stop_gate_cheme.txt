@@ -1,0 +1,1 @@
+pack=gate_cheme learners=500 avg_questions=11.46 accuracy_at_stop=0.8818

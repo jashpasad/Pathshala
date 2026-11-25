@@ -1,0 +1,620 @@
+{
+ "id": "jee_mechanics",
+ "title": "JEE Main Physics: Mechanics",
+ "titleHi": "जेईई मेन भौतिकी: यांत्रिकी",
+ "domain": "exam",
+ "description": "Mechanics for JEE Main and Class 11 physics: kinematics, laws of motion, energy, momentum, rotation, gravitation, oscillations.",
+ "keywords": [
+  "jee",
+  "jee main",
+  "jee mains",
+  "iit",
+  "physics",
+  "mechanics",
+  "class 11",
+  "neet",
+  "kinematics",
+  "rotation",
+  "bhautiki",
+  "भौतिकी"
+ ],
+ "skills": [
+  {
+   "id": "vectors",
+   "name": "Vectors, units and dimensions",
+   "nameHi": "सदिश, मात्रक और विमाएँ",
+   "summary": "Vector algebra, dimensional analysis",
+   "hours": 4,
+   "weight": 0.6,
+   "prereqs": [],
+   "keyPoints": [
+    "A vector has magnitude and direction; add vectors head-to-tail or by components.",
+    "Dot product A·B = AB cosθ (scalar); cross product |A×B| = AB sinθ (vector).",
+    "Dimensional analysis checks equations: every term must have the same dimensions.",
+    "Impulse and momentum both have dimensions [MLT⁻¹]."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Units and Measurements; Motion in a Plane (vectors)"
+   ],
+   "items": [
+    {
+     "id": "vectors_1",
+     "skillId": "vectors",
+     "stem": "The dimensional formula of impulse is:",
+     "options": [
+      "[MLT⁻¹]",
+      "[MLT⁻²]",
+      "[ML²T⁻¹]",
+      "[M⁰LT⁻¹]"
+     ],
+     "answer": 0,
+     "difficulty": -1.0,
+     "explanation": "Impulse = force × time = [MLT⁻²][T] = [MLT⁻¹]."
+    },
+    {
+     "id": "vectors_2",
+     "skillId": "vectors",
+     "stem": "If |A + B| = |A − B|, the angle between A and B is:",
+     "options": [
+      "0°",
+      "45°",
+      "90°",
+      "180°"
+     ],
+     "answer": 2,
+     "difficulty": 0.0,
+     "explanation": "Squaring both sides gives 4A·B = 0, so A ⟂ B."
+    }
+   ]
+  },
+  {
+   "id": "kinematics_1d",
+   "name": "Motion in a straight line",
+   "nameHi": "सरल रेखा में गति",
+   "summary": "Uniformly accelerated motion, graphs",
+   "hours": 4,
+   "weight": 0.8,
+   "prereqs": [
+    "vectors"
+   ],
+   "keyPoints": [
+    "Equations of motion for constant a: v = u + at, s = ut + ½at², v² = u² + 2as.",
+    "Distance in the nth second: sₙ = u + a(n − ½).",
+    "Slope of x–t graph is velocity; slope of v–t graph is acceleration; area under v–t is displacement."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Motion in a Straight Line"
+   ],
+   "items": [
+    {
+     "id": "kinematics_1d_1",
+     "skillId": "kinematics_1d",
+     "stem": "A car starts from rest with uniform acceleration 2 m/s². Distance covered in the 3rd second:",
+     "options": [
+      "9 m",
+      "5 m",
+      "4 m",
+      "6 m"
+     ],
+     "answer": 1,
+     "difficulty": 0.0,
+     "explanation": "sₙ = u + a(n − ½) = 0 + 2 × 2.5 = 5 m."
+    },
+    {
+     "id": "kinematics_1d_2",
+     "skillId": "kinematics_1d",
+     "stem": "The area under a velocity–time graph gives:",
+     "options": [
+      "Acceleration",
+      "Displacement",
+      "Jerk",
+      "Average speed"
+     ],
+     "answer": 1,
+     "difficulty": -1.5,
+     "explanation": "∫v dt = displacement."
+    }
+   ]
+  },
+  {
+   "id": "kinematics_2d",
+   "name": "Projectile and relative motion",
+   "nameHi": "प्रक्षेप्य और सापेक्ष गति",
+   "summary": "Motion in a plane",
+   "hours": 5,
+   "weight": 1.0,
+   "prereqs": [
+    "kinematics_1d"
+   ],
+   "keyPoints": [
+    "Resolve motion into independent horizontal (a = 0) and vertical (a = −g) parts.",
+    "Time of flight T = 2u sinθ / g; maximum height H = u² sin²θ / 2g; range R = u² sin2θ / g.",
+    "Complementary angles (θ and 90° − θ) give the same range; 45° gives maximum range.",
+    "Relative velocity: v_AB = v_A − v_B."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Motion in a Plane"
+   ],
+   "items": [
+    {
+     "id": "kinematics_2d_1",
+     "skillId": "kinematics_2d",
+     "stem": "A projectile is launched at 30° with speed 20 m/s (g = 10 m/s²). Its time of flight is:",
+     "options": [
+      "1 s",
+      "2 s",
+      "3.46 s",
+      "4 s"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "T = 2u sinθ/g = 2 × 20 × 0.5 / 10 = 2 s."
+    },
+    {
+     "id": "kinematics_2d_2",
+     "skillId": "kinematics_2d",
+     "stem": "For the same launch speed, which pair of angles gives equal horizontal range?",
+     "options": [
+      "30° and 45°",
+      "20° and 70°",
+      "15° and 60°",
+      "40° and 60°"
+     ],
+     "answer": 1,
+     "difficulty": 0.3,
+     "explanation": "R ∝ sin2θ, and sin2θ = sin(180° − 2θ), so complementary angles give equal range."
+    }
+   ]
+  },
+  {
+   "id": "newton_laws",
+   "name": "Newton's laws and free-body diagrams",
+   "nameHi": "न्यूटन के गति नियम",
+   "summary": "Forces, FBD, pseudo forces",
+   "hours": 5,
+   "weight": 1.0,
+   "prereqs": [
+    "vectors"
+   ],
+   "keyPoints": [
+    "Net force = rate of change of momentum; for constant mass F = ma.",
+    "Draw a free-body diagram for each body; write ΣF = ma along chosen axes.",
+    "In a lift accelerating up at a, the normal force is N = m(g + a); down: m(g − a).",
+    "Action and reaction act on different bodies."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Laws of Motion"
+   ],
+   "items": [
+    {
+     "id": "newton_laws_1",
+     "skillId": "newton_laws",
+     "stem": "A 2 kg block on a smooth floor is pulled by a 10 N horizontal force. Its acceleration is:",
+     "options": [
+      "20 m/s²",
+      "5 m/s²",
+      "0.2 m/s²",
+      "10 m/s²"
+     ],
+     "answer": 1,
+     "difficulty": -1.5,
+     "explanation": "a = F/m = 10/2 = 5 m/s²."
+    },
+    {
+     "id": "newton_laws_2",
+     "skillId": "newton_laws",
+     "stem": "A 60 kg man stands in a lift accelerating upward at 2 m/s² (g = 10 m/s²). The normal force on him is:",
+     "options": [
+      "480 N",
+      "600 N",
+      "720 N",
+      "120 N"
+     ],
+     "answer": 2,
+     "difficulty": 0.0,
+     "explanation": "N = m(g + a) = 60 × 12 = 720 N."
+    }
+   ]
+  },
+  {
+   "id": "friction",
+   "name": "Friction and constrained motion",
+   "nameHi": "घर्षण",
+   "summary": "Static/kinetic friction, inclines",
+   "hours": 4,
+   "weight": 0.8,
+   "prereqs": [
+    "newton_laws"
+   ],
+   "keyPoints": [
+    "Static friction adjusts up to μₛN; kinetic friction = μₖN opposes relative motion.",
+    "On an incline, a block is about to slide when tanθ = μₛ (angle of repose).",
+    "Check whether the applied force exceeds limiting friction before assuming motion."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Laws of Motion (friction)"
+   ],
+   "items": [
+    {
+     "id": "friction_1",
+     "skillId": "friction",
+     "stem": "A block on an incline is just about to slide when the incline angle is θ. The coefficient of static friction is:",
+     "options": [
+      "sin θ",
+      "cos θ",
+      "tan θ",
+      "cot θ"
+     ],
+     "answer": 2,
+     "difficulty": -0.3,
+     "explanation": "mg sinθ = μₛ mg cosθ ⇒ μₛ = tanθ."
+    },
+    {
+     "id": "friction_2",
+     "skillId": "friction",
+     "stem": "A 5 kg block on a rough floor (μₖ = 0.2, g = 10 m/s²) is pushed with 20 N horizontally while sliding. Its acceleration is:",
+     "options": [
+      "4 m/s²",
+      "2 m/s²",
+      "0 m/s²",
+      "3 m/s²"
+     ],
+     "answer": 1,
+     "difficulty": 0.3,
+     "explanation": "Friction = 0.2 × 50 = 10 N; net = 10 N; a = 10/5 = 2 m/s²."
+    }
+   ]
+  },
+  {
+   "id": "circular",
+   "name": "Circular motion",
+   "nameHi": "वृत्तीय गति",
+   "summary": "Centripetal force, vertical circle",
+   "hours": 4,
+   "weight": 0.8,
+   "prereqs": [
+    "kinematics_2d",
+    "newton_laws"
+   ],
+   "keyPoints": [
+    "Centripetal acceleration a = v²/r = ω²r, directed towards the centre.",
+    "Centripetal force is the net inward force (tension, friction, normal, gravity) - not a new force.",
+    "For a string in a vertical circle, minimum speed at the top is √(gR); at the bottom √(5gR)."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Motion in a Plane (uniform circular motion)"
+   ],
+   "items": [
+    {
+     "id": "circular_1",
+     "skillId": "circular",
+     "stem": "A particle moves in a circle of radius 2 m at a constant speed of 4 m/s. Its centripetal acceleration is:",
+     "options": [
+      "2 m/s²",
+      "8 m/s²",
+      "16 m/s²",
+      "4 m/s²"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "a = v²/r = 16/2 = 8 m/s²."
+    },
+    {
+     "id": "circular_2",
+     "skillId": "circular",
+     "stem": "Minimum speed at the top of a vertical circle of radius R for a string to stay taut:",
+     "options": [
+      "√(2gR)",
+      "√(gR)",
+      "√(5gR)",
+      "0"
+     ],
+     "answer": 1,
+     "difficulty": 0.5,
+     "explanation": "At the top with T = 0: mg = mv²/R ⇒ v = √(gR)."
+    }
+   ]
+  },
+  {
+   "id": "work_energy",
+   "name": "Work, energy and power",
+   "nameHi": "कार्य, ऊर्जा और शक्ति",
+   "summary": "Work-energy theorem, springs, power",
+   "hours": 5,
+   "weight": 1.0,
+   "prereqs": [
+    "newton_laws"
+   ],
+   "keyPoints": [
+    "Work W = F·d = Fd cosθ; work-energy theorem: W_net = ΔKE.",
+    "Spring potential energy U = ½kx²; gravitational PE near Earth = mgh.",
+    "Mechanical energy is conserved when only conservative forces do work.",
+    "Power P = dW/dt = F·v."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Work, Energy and Power"
+   ],
+   "items": [
+    {
+     "id": "work_energy_1",
+     "skillId": "work_energy",
+     "stem": "Work done by a force F = (3î + 4ĵ) N in displacing a body by d = 2î m is:",
+     "options": [
+      "6 J",
+      "8 J",
+      "14 J",
+      "10 J"
+     ],
+     "answer": 0,
+     "difficulty": -1.0,
+     "explanation": "W = F·d = 3 × 2 + 4 × 0 = 6 J."
+    },
+    {
+     "id": "work_energy_2",
+     "skillId": "work_energy",
+     "stem": "A spring of constant k compressed by x launches a block of mass m on a smooth floor. The block's speed is:",
+     "options": [
+      "x√(k/m)",
+      "√(kx/m)",
+      "kx/m",
+      "x√(m/k)"
+     ],
+     "answer": 0,
+     "difficulty": 0.4,
+     "explanation": "½kx² = ½mv² ⇒ v = x√(k/m)."
+    }
+   ]
+  },
+  {
+   "id": "momentum",
+   "name": "Momentum, collisions and centre of mass",
+   "nameHi": "संवेग और संघट्ट",
+   "summary": "Conservation of momentum, collisions, COM",
+   "hours": 5,
+   "weight": 1.0,
+   "prereqs": [
+    "work_energy"
+   ],
+   "keyPoints": [
+    "With no external force, total linear momentum is conserved.",
+    "Elastic collisions conserve kinetic energy too; perfectly inelastic: bodies stick together.",
+    "Equal masses in a 1-D elastic collision exchange velocities.",
+    "Centre of mass: r_cm = Σmᵢrᵢ / Σmᵢ; it moves as if all external forces act on it."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: System of Particles and Rotational Motion"
+   ],
+   "items": [
+    {
+     "id": "momentum_1",
+     "skillId": "momentum",
+     "stem": "In a perfectly inelastic collision with no external force, which quantity is always conserved?",
+     "options": [
+      "Kinetic energy",
+      "Linear momentum",
+      "Both",
+      "Neither"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "Momentum is conserved; kinetic energy is not in an inelastic collision."
+    },
+    {
+     "id": "momentum_2",
+     "skillId": "momentum",
+     "stem": "A 2 kg ball at 3 m/s collides head-on elastically with an identical ball at rest. Velocities after collision (first, second):",
+     "options": [
+      "0 and 3 m/s",
+      "1.5 and 1.5 m/s",
+      "3 and 0 m/s",
+      "−3 and 6 m/s"
+     ],
+     "answer": 0,
+     "difficulty": 0.3,
+     "explanation": "Equal masses in a 1-D elastic collision exchange velocities."
+    }
+   ]
+  },
+  {
+   "id": "rotation",
+   "name": "Rotational dynamics and rolling",
+   "nameHi": "घूर्णन गति",
+   "summary": "Torque, moment of inertia, rolling",
+   "hours": 8,
+   "weight": 1.2,
+   "prereqs": [
+    "momentum",
+    "circular"
+   ],
+   "keyPoints": [
+    "Torque τ = r × F; τ = Iα is the rotational analogue of F = ma.",
+    "Moment of inertia: ring MR², disc MR²/2, solid sphere 2MR²/5 (about central axes).",
+    "Rolling without slipping: v = ωR; KE = ½mv² + ½Iω².",
+    "Angular momentum L = Iω is conserved when net external torque is zero."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: System of Particles and Rotational Motion"
+   ],
+   "items": [
+    {
+     "id": "rotation_1",
+     "skillId": "rotation",
+     "stem": "Moment of inertia of a thin ring (mass M, radius R) about its central axis perpendicular to its plane:",
+     "options": [
+      "MR²/2",
+      "MR²",
+      "2MR²/5",
+      "3MR²/2"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "All mass is at distance R: I = MR²."
+    },
+    {
+     "id": "rotation_2",
+     "skillId": "rotation",
+     "stem": "A solid sphere rolls without slipping. The fraction of its total kinetic energy that is rotational is:",
+     "options": [
+      "2/7",
+      "2/5",
+      "5/7",
+      "1/2"
+     ],
+     "answer": 0,
+     "difficulty": 1.0,
+     "explanation": "KE_rot = ½(2/5)mv² = mv²/5; KE_total = 7mv²/10; ratio = 2/7."
+    }
+   ]
+  },
+  {
+   "id": "gravitation",
+   "name": "Gravitation",
+   "nameHi": "गुरुत्वाकर्षण",
+   "summary": "Newton's law of gravitation, orbits, escape speed",
+   "hours": 4,
+   "weight": 0.8,
+   "prereqs": [
+    "circular",
+    "work_energy"
+   ],
+   "keyPoints": [
+    "F = GMm/r²; surface gravity g = GM/R².",
+    "Orbital speed v₀ = √(GM/r); escape speed vₑ = √(2GM/R).",
+    "Gravitational PE U = −GMm/r; total energy of a circular orbit = −GMm/2r."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Gravitation"
+   ],
+   "items": [
+    {
+     "id": "gravitation_1",
+     "skillId": "gravitation",
+     "stem": "Escape speed from a planet of mass M and radius R is:",
+     "options": [
+      "√(GM/R)",
+      "√(2GM/R)",
+      "2GM/R",
+      "√(GM/2R)"
+     ],
+     "answer": 1,
+     "difficulty": -0.5,
+     "explanation": "½mvₑ² = GMm/R ⇒ vₑ = √(2GM/R)."
+    },
+    {
+     "id": "gravitation_2",
+     "skillId": "gravitation",
+     "stem": "If Earth's radius shrank to half with mass unchanged, g at its surface would become:",
+     "options": [
+      "g/2",
+      "2g",
+      "4g",
+      "g/4"
+     ],
+     "answer": 2,
+     "difficulty": 0.3,
+     "explanation": "g = GM/R² ∝ 1/R², so halving R gives 4g."
+    }
+   ]
+  },
+  {
+   "id": "shm",
+   "name": "Simple harmonic motion",
+   "nameHi": "सरल आवर्त गति",
+   "summary": "SHM, springs, pendulum",
+   "hours": 5,
+   "weight": 0.9,
+   "prereqs": [
+    "work_energy",
+    "circular"
+   ],
+   "keyPoints": [
+    "SHM: a = −ω²x; x = A sin(ωt + φ).",
+    "Maximum speed Aω at the mean position; maximum acceleration Aω² at the extremes.",
+    "Spring-mass T = 2π√(m/k); simple pendulum T = 2π√(L/g)."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Oscillations"
+   ],
+   "items": [
+    {
+     "id": "shm_1",
+     "skillId": "shm",
+     "stem": "For SHM x = A sin(ωt), the maximum speed is:",
+     "options": [
+      "Aω²",
+      "Aω",
+      "A/ω",
+      "ω/A"
+     ],
+     "answer": 1,
+     "difficulty": -1.0,
+     "explanation": "v = Aω cos(ωt), maximum Aω."
+    },
+    {
+     "id": "shm_2",
+     "skillId": "shm",
+     "stem": "If the length of a simple pendulum is made 4 times, its time period:",
+     "options": [
+      "Halves",
+      "Doubles",
+      "Becomes 4 times",
+      "Is unchanged"
+     ],
+     "answer": 1,
+     "difficulty": -0.3,
+     "explanation": "T ∝ √L, so 4L gives 2T."
+    }
+   ]
+  },
+  {
+   "id": "fluids_elasticity",
+   "name": "Properties of solids and fluids",
+   "nameHi": "ठोस और तरल के गुण",
+   "summary": "Elasticity, pressure, Bernoulli, viscosity",
+   "hours": 4,
+   "weight": 0.7,
+   "prereqs": [
+    "newton_laws"
+   ],
+   "keyPoints": [
+    "Young's modulus Y = stress/strain.",
+    "Pressure in a fluid increases with depth: P = P₀ + ρgh.",
+    "Bernoulli's equation expresses conservation of energy along a streamline.",
+    "Stokes' law: viscous drag 6πηrv; terminal velocity ∝ r²."
+   ],
+   "resources": [
+    "NCERT Class 11 Physics: Mechanical Properties of Solids; Mechanical Properties of Fluids"
+   ],
+   "items": [
+    {
+     "id": "fluids_elasticity_1",
+     "skillId": "fluids_elasticity",
+     "stem": "Bernoulli's principle is a statement of conservation of:",
+     "options": [
+      "Mass",
+      "Energy",
+      "Momentum",
+      "Charge"
+     ],
+     "answer": 1,
+     "difficulty": -0.8,
+     "explanation": "It is an energy balance per unit volume along a streamline."
+    },
+    {
+     "id": "fluids_elasticity_2",
+     "skillId": "fluids_elasticity",
+     "stem": "Terminal velocity of a small sphere falling in a viscous fluid varies with its radius r as:",
+     "options": [
+      "r",
+      "r²",
+      "1/r",
+      "r³"
+     ],
+     "answer": 1,
+     "difficulty": 0.4,
+     "explanation": "v_t = 2r²(ρ − σ)g / 9η ∝ r²."
+    }
+   ]
+  }
+ ]
+}

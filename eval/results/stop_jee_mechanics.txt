@@ -1,0 +1,1 @@
+pack=jee_mechanics learners=500 avg_questions=9.87 accuracy_at_stop=0.8765

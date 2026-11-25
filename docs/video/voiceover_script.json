@@ -1,0 +1,13 @@
+[
+ ["title", "PathShala. A personal learning companion that runs entirely on an Arm Android phone."],
+ ["idea", "Our idea: Llama for language, algorithms for decisions. Llama 3.2 runs through ExecuTorch on the Arm CPU, to understand and explain. A symbolic engine diagnoses gaps and plans the study."],
+ ["goal", "These are PathShala's real screens, shown in template mode. A learner types a goal in Hinglish. It becomes a structured goal: GATE Chemical, four months, twenty-one hours a week. Every field is validated, with a rule-based backup."],
+ ["diag", "Next, a short adaptive quiz. Each question is the most informative one for the whole prerequisite graph, so it finishes in twelve questions or fewer."],
+ ["map", "The skill map shows mastery. Red is a gap, green is mastered, and arrows are prerequisites."],
+ ["plan", "The planner ranks topics by exam value per hour, respects prerequisites, and fits the deadline. Every block says why it is there, and the narration uses only facts the engine computed."],
+ ["practice", "Practice has guardrails. Hints never reveal the answer, and each answer updates mastery immediately."],
+ ["adapt", "Days later, the plan has re-optimised itself around the new evidence."],
+ ["results", "In simulation with five hundred learners per pack, the adaptive quiz classified up to ninety percent of skills correctly, against at most eighty-three for a fixed test. When time is tight, the planner raised exam readiness by fifty-five to ninety-four percent."],
+ ["arm", "The app ships Llama 3.2 one B, quantised to four bits, on XNNPACK with KleidiAI kernels. And it requests zero Android permissions, so student data never leaves the phone."],
+ ["end", "PathShala. Llama for language, algorithms for decisions."]
+]
