@@ -1,5 +1,5 @@
 # PathShala — पथशाला
-> **Demo video (2 min):** https://youtu.be/uMShBU5a4UA · **Technical report:** [docs/PathShala_Technical_Report.pdf](docs/PathShala_Technical_Report.pdf)
+> **Demo video (2 min):** https://youtu.be/uMShBU5a4UA · **Technical report:** [docs/PathShala_Technical_Report_arXiv.pdf](docs/PathShala_Technical_Report_arXiv.pdf)
 
 ### An on-device, neuro-symbolic personalised learning companion for Arm Android phones
 **Arm Bharat AI-SoC Challenge 2026-27 · Problem Statement 4: On-device personalised learning assistant**
@@ -40,8 +40,7 @@ flowchart LR
 | `tools/build_packs.py` | Human-readable pack authoring source → JSON |
 | `model/` | Llama 3.2 → `.pte` export script (ExecuTorch 1.5.1, SpinQuant, XNNPACK, ctx 2048) and phone push script |
 | `eval/` | Results CSVs, figures and `RESULTS.md` from the synthetic-learner study |
-| `docs/` | Technical report (PDF), 2-minute demo script, `video/make_demo.sh` (portrait phone recording → 1080p 16:9 MP4 with title, fact panel and captions) |
-| `SUBMISSION_CHECKLIST.md` | Everything to do before the one-shot submission form |
+| `docs/` | Technical report (PDF) and app screenshots (`screens/`) |
 
 ## Quick start
 ```bash
